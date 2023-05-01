@@ -15,8 +15,6 @@ namespace Raycasting1{
         public float angle = 0.0f;
         private float renderDistance = 5.0f;
 
-        //List<Vector2> castedRays = new List<Vector2>();
-
         // stores the number of rays that will be casted
         static int raysAmount = 120;
         // Array that will store every rays vector

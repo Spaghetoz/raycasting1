@@ -101,7 +101,7 @@ namespace Raycasting1{
         /////////// method that will cast a single ray starting from the player and finishing to the first encountered wall
         // parameters are map grid, angle of projection and index in the CastedRays arrays
         public void CastRay(int[,] grid, float angle, int indexInArrays) {
-            ////// Thanks to WeirdDevers for the explanations : https://youtu.be/g8p7nAbDz6Y  (but there is some mistakes) /////
+            
 
             //----- checking vertical lines intersection
             Vector2 deltaDistX = new Vector2();

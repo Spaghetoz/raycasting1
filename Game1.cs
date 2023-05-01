@@ -111,7 +111,6 @@ public class Game1 : Game
         
         // hud rendering
         
-        spriteBatch.DrawString(font, $"q:{windowWidth/player.CastedRays.Length}", new Vector2(400, 600), Color.White);
         spriteBatch.DrawString(font, $"Player position x:{player.Position.Y} y:{player.Position.X}", new Vector2(400, 0), Color.White);
         //DrawLine(spriteBatch, limeTexture, player.Position*minimapScale, new Vector2(mouseState.X, mouseState.Y));
 

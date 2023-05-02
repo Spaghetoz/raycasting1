@@ -9,7 +9,7 @@ namespace Raycasting1{
 
         private int minimapScale;
 
-        private float movingSpeed = 0.05f;
+        private float movingSpeed = 0.06f;
         private float rotationAngle = (float)(Math.PI/40.0f);  // value applied when rotating with keys left and right
 
         public float angle = 0.0f;
@@ -262,6 +262,9 @@ namespace Raycasting1{
             for(int i = 0; i < 120; i++) {
                 CastRay(grid, angle, i);
 
+                // we store the angle of the casted ray 
+                CastedRaysAngle[i] = angle;
+
                 // then we cast the next ray 0.5degrees right
                 angle+=Functions.DegToRad(0.5f);
             }
@@ -294,6 +297,7 @@ namespace Raycasting1{
             for(int i = 0; i < CastedRays.Length; i++) {
                 // the line height will depends on the ray length
                 int lineHeight = (int)(windowHeight/Functions.VectorLength(CastedRays[i]));
+
                 // reduce the line height if it exceeds the window height
                 if(lineHeight > windowHeight) lineHeight = windowHeight;  
 
